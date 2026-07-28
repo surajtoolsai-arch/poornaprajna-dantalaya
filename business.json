@@ -1,0 +1,54 @@
+{
+  "$schema": "LocalBizStudio business schema v1",
+  "name": "Poornaprajna Dantalaya",
+  "industry": "Dental Clinic",
+  "tagline": "Your Smile is Our Pride",
+  "founder": "Dr. Bhargavi Koty",
+  "founder_credentials": "B.D.S., Dental Surgeon, Regd. No. A-11943",
+  "experience": "",
+  "phone": "+91 94821 67057",
+  "phone_secondary": "+91 99450 44296",
+  "whatsapp": "919482167057",
+  "email": "dr.bhargavi.koty@gmail.com",
+  "address": "#11 & 12, 2nd Main, Gururaja Layout, Thyagraj Nagar, BSK 3rd Stage, Behind Vidyapeetha Circle, Bengaluru – 560070",
+  "maps_query": "Gururaja Layout, Thyagraj Nagar, BSK 3rd Stage, Bengaluru 560070",
+  "google_rating": "5.0",
+  "reviews_count": "23",
+  "year_started": "",
+  "hours": [
+    { "day": "Monday – Saturday", "time": "10:00 AM – 2:00 PM, 5:00 PM – 8:30 PM" },
+    { "day": "Sunday", "time": "Closed" }
+  ],
+  "services": [
+    { "title": "Routine Oral Check-up", "description": "A thorough exam to catch issues early and keep your mouth healthy." },
+    { "title": "Dental Cleaning & Whitening", "description": "Gentle professional cleaning that removes plaque and brightens your smile." },
+    { "title": "Dental Fillings", "description": "Comfortable, tooth-coloured fillings to treat cavities and restore strength." },
+    { "title": "Root Canal Therapy", "description": "Painless, modern root canal treatment to save a damaged tooth." },
+    { "title": "Dental Implants", "description": "Durable, natural-looking replacements for missing teeth." },
+    { "title": "Dental Extractions", "description": "Safe, careful removal when a tooth truly can't be saved." },
+    { "title": "Dental Braces", "description": "Guided teeth alignment for a straighter, more confident smile." },
+    { "title": "Dental Crowns & Bridge", "description": "Custom-fitted restorations that protect and complete your smile." }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/poornaprajnadantalaya"
+  },
+  "testimonials": [
+    { "name": "Shrivatsa Kulkarni", "rating": 5, "review": "I had a very good experience at this dental clinic. The doctors and staff were very professional, friendly, and made me feel at ease throughout the entire process." },
+    { "name": "Sindhu Bhagi", "rating": 5, "review": "My daughter is 7 years old and the doctor Bhargavi is patient and makes her feel comfortable. She did not suggest unnecessary and expensive treatments. It was a wonderful experience." },
+    { "name": "Srihari Upadhyaya K", "rating": 5, "review": "A good dental clinic that offers great value for money. Dr. Bhargavi Koty did an excellent job with my root canal treatment and cap fitting — she explained the procedure clearly and gave proper post-treatment instructions." }
+  ],
+  "colors": {
+    "primary": "#26699B",
+    "primary_dark": "#1D4765",
+    "accent": "#E39A63",
+    "background": "#FAFCFD"
+  },
+  "fonts": {
+    "display": "Plus Jakarta Sans",
+    "body": "Inter"
+  },
+  "cta": {
+    "primary_label": "Book Appointment via WhatsApp",
+    "whatsapp_message": "Hello, I would like to book an appointment at Poornaprajna Dantalaya."
+  }
+}
