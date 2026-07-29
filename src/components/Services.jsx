@@ -1,9 +1,18 @@
+import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { Eye } from 'lucide-react'
 import { services } from '../data/content'
 import { fadeUp, stagger, viewportOnce } from '../utils/motion'
 import SectionHeading from './SectionHeading'
 
 export default function Services() {
+  const [active, setActive] = useState(null)
+  // Touch fires pointerenter too, so remember how the card was reached and let
+  // tap toggle only on touch — otherwise a mouse click would close the reveal.
+  const pointerType = useRef('mouse')
+
+  const toggle = (i) => setActive((current) => (current === i ? null : i))
+
   return (
     <section id="services" className="py-16 sm:py-20 lg:py-24 bg-brand-50/40">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col gap-12">
@@ -18,23 +27,85 @@ export default function Services() {
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6"
         >
-          {services.map((service) => {
+          {services.map((service, i) => {
             const Icon = service.icon
+            const isActive = active === i
+
             return (
               <motion.div
                 key={service.title}
                 variants={fadeUp}
-                whileHover={{ y: -8 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                className="group bg-white rounded-2xl border border-black/5 shadow-soft p-6 flex flex-col gap-4 hover:shadow-lift"
+                role="button"
+                tabIndex={0}
+                aria-expanded={isActive}
+                aria-label={`${service.title} — view illustration`}
+                onPointerEnter={(e) => {
+                  pointerType.current = e.pointerType
+                  if (e.pointerType === 'mouse') setActive(i)
+                }}
+                onPointerLeave={(e) => {
+                  if (e.pointerType === 'mouse') setActive(null)
+                }}
+                onClick={() => {
+                  if (pointerType.current !== 'mouse') toggle(i)
+                }}
+                onFocus={() => setActive(i)}
+                onBlur={() => setActive(null)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    toggle(i)
+                  }
+                }}
+                className="group relative aspect-[6/5] overflow-hidden rounded-2xl border border-black/5 bg-white shadow-soft transition-shadow duration-300 hover:shadow-lift focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 cursor-pointer"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
-                  <Icon className="h-6 w-6" />
-                </span>
-                <h3 className="text-base font-bold text-ink">{service.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{service.description}</p>
+                {/* Resting state */}
+                <div
+                  className={`absolute inset-0 flex flex-col gap-4 p-6 sm:p-8 transition-opacity duration-300 ease-out ${
+                    isActive ? 'opacity-0' : 'opacity-100'
+                  }`}
+                >
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+                    <Icon className="h-6 w-6" />
+                  </span>
+                  <h3 className="text-lg sm:text-xl font-bold text-ink">{service.title}</h3>
+                  <p className="text-sm sm:text-base text-muted leading-relaxed max-w-sm">
+                    {service.description}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-600">
+                    <Eye className="h-4 w-4" />
+                    <span className="lg:hidden">Tap to view</span>
+                    <span className="hidden lg:inline">Hover to view</span>
+                  </span>
+                </div>
+
+                {/* Revealed artwork. object-contain keeps the baked-in captions
+                    from being cropped; the artwork's own light background
+                    blends into the white card. */}
+                <div
+                  className={`absolute inset-0 transition-opacity duration-300 ease-out ${
+                    isActive ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  aria-hidden={!isActive}
+                >
+                  <img
+                    src={service.image}
+                    alt={`${service.title} at Poornaprajna Dantalaya`}
+                    loading="lazy"
+                    decoding="async"
+                    className={`h-full w-full transition-transform duration-500 ease-out ${
+                      service.captioned ? 'object-contain' : 'object-cover'
+                    } ${isActive ? 'scale-100' : 'scale-[1.03]'}`}
+                  />
+
+                  {!service.captioned && (
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent px-6 pb-5 pt-10">
+                      <h3 className="text-base sm:text-lg font-bold text-white">{service.title}</h3>
+                    </div>
+                  )}
+                </div>
               </motion.div>
             )
           })}
