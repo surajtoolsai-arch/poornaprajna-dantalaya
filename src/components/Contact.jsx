@@ -8,7 +8,11 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-surface">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col gap-12">
-        <SectionHeading eyebrow="Visit Us" title="Book your visit or drop by" />
+        <SectionHeading
+          eyebrow="Visit Us"
+          title="Visit Poornaprajna Dantalaya"
+          subtitle="We look forward to welcoming you to a clean, comfortable, and patient-friendly dental clinic."
+        />
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           <motion.div
@@ -72,6 +76,10 @@ export default function Contact() {
               <MessagesSquare className="h-5 w-5" />
               Book Appointment via WhatsApp
             </motion.a>
+
+            <p className="text-sm text-muted leading-relaxed text-center">
+              Book your appointment today and experience ethical, gentle, and personalised dental care.
+            </p>
           </motion.div>
 
           <motion.div
@@ -79,7 +87,7 @@ export default function Contact() {
             initial="hidden"
             whileInView="show"
             viewport={viewportOnce}
-            className="rounded-2xl overflow-hidden shadow-soft aspect-[4/3] lg:aspect-auto lg:h-full min-h-[360px]"
+            className="w-full rounded-2xl overflow-hidden shadow-soft h-[320px] lg:h-full lg:min-h-[360px]"
           >
             <iframe
               title="Poornaprajna Dantalaya location on Google Maps"

@@ -9,8 +9,8 @@ export default function Services() {
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col gap-12">
         <SectionHeading
           eyebrow="What We Offer"
-          title="Comprehensive Dental Services"
-          subtitle="Clear, one-sentence explanations for every treatment we offer — no jargon, no surprises."
+          title="Comprehensive Dental Care"
+          subtitle="Complete dental solutions for patients of all ages, using modern technology and a gentle approach."
         />
 
         <motion.div

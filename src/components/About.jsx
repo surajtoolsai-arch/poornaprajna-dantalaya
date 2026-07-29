@@ -37,13 +37,20 @@ export default function About() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-ink tracking-tight">
             {site.doctor.name}
           </h2>
-          <p className="text-sm font-semibold text-brand-700">{site.doctor.credentials}</p>
+          <p className="text-sm font-semibold text-brand-700">
+            {site.doctor.credentials} · {site.doctor.college}
+          </p>
 
           <p className="text-base text-muted leading-relaxed max-w-prose">
-            At Poornaprajna Dantalaya, Dr. Bhargavi Koty treats every patient like family —
-            taking the time to listen, explain each step in plain language, and recommend
-            only the treatment you actually need. Whether it's a routine check-up or a more
-            involved procedure, you're in calm, capable hands.
+            At Poornaprajna Dantalaya, Dr. Bhargavi Koty is passionately dedicated to providing
+            personalised dental care with compassion, precision, and integrity. Every treatment is
+            planned with your comfort and long-term oral health in mind.
+          </p>
+
+          <p className="text-base text-muted leading-relaxed max-w-prose">
+            Whether you need a routine dental check-up, pain relief, cosmetic enhancement, or advanced
+            dental treatment, you can expect a calm, reassuring experience supported by modern
+            techniques and evidence-based care.
           </p>
 
           <div className="flex items-center gap-2.5 rounded-xl bg-brand-50 px-4 py-3 w-fit">
@@ -52,7 +59,7 @@ export default function About() {
           </div>
 
           <blockquote className="border-l-2 border-brand-300 pl-4 text-ink/80 italic text-sm sm:text-base">
-            "Your comfort matters as much as your smile — we go at your pace, always."
+            "Our goal is not just to treat teeth, but to help every patient smile with confidence."
           </blockquote>
         </motion.div>
       </div>

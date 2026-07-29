@@ -23,8 +23,8 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={fadeUp} className="text-base sm:text-lg text-muted max-w-lg leading-relaxed">
-            Gentle, honest dental care for the whole family in BSK 3rd Stage — led by {site.doctor.name},{' '}
-            {site.doctor.credentials}. We take the time to explain, so you always know what's happening with your teeth.
+            Compassionate, ethical, and modern dental care for every member of your family in BSK 3rd
+            Stage — led by {site.doctor.name}, {site.doctor.credentials}.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 pt-2">

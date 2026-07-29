@@ -10,9 +10,9 @@ export default function Testimonials() {
     <section id="reviews" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col gap-12">
         <SectionHeading
-          eyebrow="Patient Stories"
-          title={`Loved by our patients — ${site.googleRating}★ on Google`}
-          subtitle={`Real reviews from our ${site.reviewsCount} Google ratings.`}
+          eyebrow="Trusted by Our Patients"
+          title={`Rated ${site.googleRating}★ on Google`}
+          subtitle="Nothing speaks louder than the experience of our patients."
         />
 
         <motion.div
@@ -38,6 +38,16 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </motion.div>
+
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+          className="text-center text-lg font-semibold text-brand-700"
+        >
+          Your trust is our greatest achievement.
+        </motion.p>
       </div>
     </section>
   )

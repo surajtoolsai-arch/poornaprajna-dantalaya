@@ -8,6 +8,8 @@ html {
 
 body {
   @apply font-sans text-ink bg-surface antialiased;
+  /* Scroll-in transforms start off-canvas; without this they widen the page on mobile. */
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {

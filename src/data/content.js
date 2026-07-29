@@ -1,10 +1,11 @@
 import { Stethoscope, Sparkles, Wrench, Activity, PocketKnife, Scissors, AlignJustify, Layers } from 'lucide-react'
 
 export const navLinks = [
+  { label: 'Why Visit Us', href: '#why' },
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Reviews', href: '#reviews' },
-  { label: 'Learn With Us', href: '#learn' },
+  { label: 'Learn', href: '#learn' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -28,43 +29,53 @@ export const testimonials = [
 
 export const services = [
   {
-    title: 'Routine Oral Check-up',
-    description: 'A thorough exam to catch issues early and keep your mouth healthy.',
+    title: 'Preventive Dental Check-ups',
+    description: 'Regular examinations to detect problems early and maintain lifelong oral health.',
     icon: Stethoscope,
   },
   {
-    title: 'Dental Cleaning & Whitening',
-    description: 'Gentle professional cleaning that removes plaque and brightens your smile.',
+    title: 'Professional Teeth Cleaning & Whitening',
+    description: 'Remove plaque, stains, and tartar while improving the brightness of your smile.',
     icon: Sparkles,
   },
   {
-    title: 'Dental Fillings',
-    description: "Comfortable, tooth-coloured fillings to treat cavities and restore strength.",
+    title: 'Tooth-Coloured Fillings',
+    description: 'Natural-looking restorations that repair cavities and strengthen damaged teeth.',
     icon: Wrench,
   },
   {
-    title: 'Root Canal Therapy',
-    description: 'Gentle, modern root canal treatment to relieve pain and save your tooth.',
+    title: 'Comfortable Root Canal Treatment',
+    description: 'Modern, painless techniques to relieve tooth pain and preserve your natural tooth.',
     icon: Activity,
   },
   {
     title: 'Dental Implants',
-    description: 'Durable, natural-looking replacements for missing teeth.',
+    description: 'Permanent, natural-looking replacements that restore missing teeth with confidence.',
     icon: PocketKnife,
   },
   {
-    title: 'Dental Extractions',
-    description: "Safe, careful removal when a tooth truly can't be saved.",
+    title: 'Tooth Extractions',
+    description: 'Safe and gentle removal of teeth only when they cannot be saved.',
     icon: Scissors,
   },
   {
-    title: 'Dental Braces',
-    description: 'Guided teeth alignment for a straighter, more confident smile.',
+    title: 'Braces & Teeth Alignment',
+    description: 'Personalised orthodontic treatments to create healthier bites and confident smiles.',
     icon: AlignJustify,
   },
   {
-    title: 'Dental Crowns & Bridge',
-    description: 'Custom-fitted restorations that protect and complete your smile.',
+    title: 'Crowns & Bridges',
+    description: 'Strong, custom-made restorations that protect damaged teeth and replace missing ones.',
     icon: Layers,
   },
+]
+
+export const learnTopics = [
+  'Tooth pain',
+  'Root canal treatment',
+  'Dental implants',
+  'Braces',
+  "Children's dental care",
+  'Oral hygiene tips',
+  'Common dental myths',
 ]

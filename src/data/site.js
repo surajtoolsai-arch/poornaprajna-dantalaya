@@ -4,10 +4,12 @@
 export const site = {
   name: 'Poornaprajna Dantalaya',
   tagline: 'Your Smile is Our Pride',
+  signOff: 'Your Smile. Our Commitment.',
   doctor: {
     name: 'Dr. Bhargavi Koty',
     credentials: 'B.D.S., Dental Surgeon',
-    registration: 'Regd. No. A-11943',
+    college: 'Govt. Dental College & Hospital',
+    registration: 'Registration No. 63992 A',
   },
   phone: '+91 94821 67057',
   phoneSecondary: '+91 99450 44296',

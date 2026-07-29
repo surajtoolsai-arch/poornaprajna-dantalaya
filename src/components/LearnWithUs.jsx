@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Instagram, PlayCircle } from 'lucide-react'
 import { site } from '../data/site'
+import { learnTopics } from '../data/content'
 import { fadeUp, slideRight, viewportOnce } from '../utils/motion'
 
 export default function LearnWithUs() {
@@ -18,12 +19,28 @@ export default function LearnWithUs() {
             Learn With Us
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-            Watch patient FAQs & procedure explainers on Instagram
+            Learn about your dental health
           </h2>
           <p className="text-base text-brand-100/90 leading-relaxed max-w-lg">
-            Dr. Bhargavi shares simple, honest explainers on common dental questions and
-            procedures — so you can understand your treatment before you ever sit in the chair.
+            We believe informed patients make better decisions. Follow Dr. Bhargavi on Instagram for
+            simple, easy-to-understand videos covering:
           </p>
+
+          <ul className="flex flex-wrap gap-2">
+            {learnTopics.map((topic) => (
+              <li
+                key={topic}
+                className="rounded-full bg-white/10 border border-white/15 px-3.5 py-1.5 text-sm text-brand-50"
+              >
+                {topic}
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-base text-brand-100/90 leading-relaxed max-w-lg">
+            Because understanding your treatment is the first step towards a healthier smile.
+          </p>
+
           <motion.a
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}

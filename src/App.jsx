@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import WhyVisit from './components/WhyVisit'
 import About from './components/About'
 import Services from './components/Services'
 import Testimonials from './components/Testimonials'
@@ -14,6 +15,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <WhyVisit />
         <About />
         <Services />
         <Testimonials />
