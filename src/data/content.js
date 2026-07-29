@@ -6,7 +6,6 @@ export const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Reviews', href: '#reviews' },
   { label: 'Learn', href: '#learn' },
-  { label: 'Contact', href: '#contact' },
 ]
 
 export const testimonials = [
