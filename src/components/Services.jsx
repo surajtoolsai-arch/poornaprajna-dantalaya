@@ -59,7 +59,7 @@ export default function Services() {
                     toggle(i)
                   }
                 }}
-                className="group relative aspect-[6/5] overflow-hidden rounded-2xl border border-black/5 bg-white shadow-soft transition-shadow duration-300 hover:shadow-lift focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 cursor-pointer"
+                className="group relative aspect-[5/4] overflow-hidden rounded-2xl border border-black/5 bg-white shadow-soft transition-shadow duration-300 hover:shadow-lift focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 cursor-pointer"
               >
                 {/* Resting state */}
                 <div
@@ -74,16 +74,14 @@ export default function Services() {
                   <p className="text-sm sm:text-base text-muted leading-relaxed max-w-sm">
                     {service.description}
                   </p>
-                  <span className="mt-auto inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-600">
+                  <span className="mt-auto text-brand-600/40" aria-hidden="true">
                     <Eye className="h-4 w-4" />
-                    <span className="lg:hidden">Tap to view</span>
-                    <span className="hidden lg:inline">Hover to view</span>
                   </span>
                 </div>
 
-                {/* Revealed artwork. object-contain keeps the baked-in captions
-                    from being cropped; the artwork's own light background
-                    blends into the white card. */}
+                {/* The captioned artwork is authored at 5:4, matching the card,
+                    so object-cover fills it edge to edge without cropping any
+                    of the baked-in text. */}
                 <div
                   className={`absolute inset-0 transition-opacity duration-300 ease-out ${
                     isActive ? 'opacity-100' : 'opacity-0'
@@ -95,9 +93,9 @@ export default function Services() {
                     alt={`${service.title} at Poornaprajna Dantalaya`}
                     loading="lazy"
                     decoding="async"
-                    className={`h-full w-full transition-transform duration-500 ease-out ${
-                      service.captioned ? 'object-contain' : 'object-cover'
-                    } ${isActive ? 'scale-100' : 'scale-[1.03]'}`}
+                    className={`h-full w-full object-cover transition-transform duration-500 ease-out ${
+                      isActive ? 'scale-100' : 'scale-[1.03]'
+                    }`}
                   />
 
                   {!service.captioned && (
