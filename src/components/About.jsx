@@ -14,11 +14,13 @@ export default function About() {
           viewport={viewportOnce}
           className="relative order-2 lg:order-1"
         >
-          <div className="rounded-[24px] overflow-hidden shadow-soft aspect-[4/3]">
+          <div className="rounded-[24px] overflow-hidden shadow-soft aspect-[5/4]">
             <img
-              src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80"
-              alt="Warm, clean dental consultation room"
-              className="h-full w-full object-cover"
+              src="/dr-bhargavi-koty.jpg"
+              alt={`${site.doctor.name}, ${site.doctor.credentials}, at Poornaprajna Dantalaya`}
+              width="553"
+              height="622"
+              className="h-full w-full object-cover [object-position:center_12%]"
               loading="lazy"
             />
           </div>

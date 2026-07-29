@@ -59,8 +59,8 @@ export default function Hero() {
         >
           <div className="relative rounded-[28px] overflow-hidden shadow-lift aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
             <img
-              src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80"
-              alt="Clean, modern dental treatment room"
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80"
+              alt="Clean, modern dental clinic reception"
               className="h-full w-full object-cover"
               loading="eager"
             />
