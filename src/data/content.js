@@ -1,7 +1,7 @@
 import { Stethoscope, Sparkles, Wrench, Activity, PocketKnife, Scissors, AlignJustify, Layers } from 'lucide-react'
 
 export const navLinks = [
-  { label: 'Why Visit Us', href: '#why' },
+  { label: 'Why Us', href: '#why' },
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Reviews', href: '#reviews' },
